@@ -4,5 +4,6 @@ window.ELEVATED_CONFIG = {
   phoneDial: "+14077807689",
   instagram: "https://instagram.com/elevatedeateryco",
   tiktok: "https://www.tiktok.com/@elevatedeateryco",
-  squareLinks: { singleMeal: "", tenMealPack: "", monthlyService: "" }
+  squareLinks: { singleMeal: "", tenMealPack: "", monthlyService: "" },
+  squareCheckoutEndpoint: ""
 };

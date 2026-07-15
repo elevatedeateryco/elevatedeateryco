@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elevated Eatery Co.</title><link rel="stylesheet" href="styles.css"><script src="config.js"></script></head><body>
 <div class="announcement-bar">MEAL-PREP ORDERS CLOSE FRIDAY AT 9:00 PM <span>•</span> SUNDAY PICKUP AFTER 2:00 PM</div>
-<header class="site-header"><div class="container header-inner"><a href="#story"><img class="logo" src="assets/logo.png"></a><button class="menu-toggle">Menu</button><nav><a href="#story">Our Story</a><a href="#catering">Catering</a><a href="#live-entertainment">Live Entertainment</a><a href="#private-chef">Private Chef</a><a href="#meal-prep">Meal Prep</a><a class="nav-order" href="#catering-form-wrap">Request a Quote</a></nav></div></header>
+<header class="site-header"><div class="container header-inner"><a href="#story"><img class="logo" src="assets/logo.png"></a><button class="menu-toggle">Menu</button><nav><a href="#story">Our Story</a><a href="#catering">Catering</a><a href="#live-entertainment">Live Entertainment</a><a href="#private-chef">Private Chef</a><a href="#order-meal-prep">Meal Prep</a><a class="nav-order" href="#catering-form-wrap">Request a Quote</a></nav></div></header>
 <main>
-<section class="story-hero" id="story"><div class="story-overlay"></div><div class="container story-hero-content"><div class="kicker">Our Story</div><h1>Food Worth Remembering.</h1><p class="lead">Elevated Eatery Co. is a family-owned culinary company led by professionally trained chefs with more than 16 years of experience across Latin, Mediterranean, American, Italian, and international cuisines.</p><p>From intimate private dinners to weddings, corporate events, festivals, and large celebrations, every experience is built around fresh ingredients, thoughtful presentation, and personal service.</p><div class="buttons"><a class="button" href="#catering-form-wrap">Request Catering</a><a class="button secondary" href="#meal-prep">Order Meal Prep</a></div></div></section>
+<section class="story-hero" id="story"><div class="story-overlay"></div><div class="container story-hero-content"><div class="kicker">Our Story</div><h1>Food Worth Remembering.</h1><p class="lead">Elevated Eatery Co. is a family-owned culinary company led by professionally trained chefs with more than 16 years of experience across Latin, Mediterranean, American, Italian, and international cuisines.</p><p>From intimate private dinners to weddings, corporate events, festivals, and large celebrations, every experience is built around fresh ingredients, thoughtful presentation, and personal service.</p><div class="buttons"><a class="button" href="#catering-form-wrap">Request Catering</a><a class="button secondary" href="#order-meal-prep">Order Meal Prep</a></div></div></section>
 <section class="section light" id="catering"><div class="container"><div class="section-heading"><div class="kicker">Our primary specialty</div><h2>Catering Designed Around Your Event</h2><p>Customized menus, polished presentation, attentive service, and experiences designed around your guests, venue, and vision.</p></div><div class="service-grid"><article class="service-card"><h3>Weddings</h3><p>Buffets, plated dinners, cocktail hours, late-night bites, and full-service wedding dining.</p></article><article class="service-card"><h3>Corporate Events</h3><p>Business lunches, conferences, grand openings, and company celebrations.</p></article><article class="service-card"><h3>Private Celebrations</h3><p>Birthdays, anniversaries, graduations, holidays, and milestone events.</p></article><article class="service-card"><h3>Large Events</h3><p>Festivals, universities, HOAs, and high-volume catered experiences.</p></article></div></div></section>
 <section class="section" id="catering-form-wrap"><div class="container aligned-inquiry"><div class="inquiry-visual"><img class="hero-catering" src="assets/catering-drinks.jpeg"><img src="assets/catering-desserts.jpeg"><img src="assets/catering-sign.jpeg"></div><form class="contact-card" id="catering-form"><div class="kicker">Tell us about your event</div><h2>Request a Catering Quote</h2><div class="form-grid"><div><label class="form-label">Name</label><input name="Name" required></div><div><label class="form-label">Email</label><input type="email" name="Email" required></div><div><label class="form-label">Phone</label><input type="tel" name="Phone" required></div><div><label class="form-label">Event date</label><input type="date" name="Event date" required></div><div><label class="form-label">Guest count</label><input type="number" name="Guest count" required></div><div><label class="form-label">Venue / city</label><input name="Venue or city" required></div><div><label class="form-label">Event type</label><select name="Event type"><option>Wedding</option><option>Birthday</option><option>Corporate</option><option>Graduation</option><option>Holiday</option><option>Festival</option><option>Other</option></select></div><div><label class="form-label">Service style</label><select name="Service style"><option>Drop-off</option><option>Buffet</option><option>Plated</option><option>Cocktail / Canapés</option><option>Live Station</option><option>Bartending</option></select></div><div class="full"><label class="form-label">Tell us about your event</label><textarea name="Event details" rows="8"></textarea></div></div><button class="button">Email Catering Inquiry</button></form></div></section>
 <section class="section cream" id="live-entertainment">
@@ -44,10 +44,297 @@
     <p class="simple-delivery">Sunday pickup begins after 2:00 PM. Central Florida delivery is quoted separately and generally ranges from $50–$75.</p>
 
     <div id="weekly-countdown" class="simple-countdown"></div>
-    <a class="button" href="#builder">Build Your Bowl</a>
+    <a class="button" href="#order-meal-prep">Build Your Bowl</a>
   </div>
 </div>
 </section>
+
+<section class="section ordering-shop-section" id="order-meal-prep">
+  <div class="container">
+    <div class="section-heading ordering-heading">
+      <div class="kicker">Order weekly meal prep</div>
+      <h2>Choose Your Plan &amp; Build Your Box</h2>
+      <p>Select your pricing plan and fulfillment method first. Then choose the quantity of each Signature Bowl or add individually customized bowls.</p>
+    </div>
+
+    <div class="order-wizard">
+      <div class="order-progress" aria-label="Ordering steps">
+        <span class="active" data-step-dot="1">1 <em>Plan</em></span>
+        <span data-step-dot="2">2 <em>Fulfillment</em></span>
+        <span data-step-dot="3">3 <em>Meals</em></span>
+        <span data-step-dot="4">4 <em>Review</em></span>
+      </div>
+
+      <div class="wizard-panel active" data-order-step="1">
+        <div class="order-panel-title">
+          <div>
+            <div class="kicker">Step 1</div>
+            <h3>Choose a Pricing Plan</h3>
+          </div>
+          <p>Your selection controls the minimum number of meals and the price per meal.</p>
+        </div>
+
+        <div class="package-grid">
+          <button type="button" class="package-card selected" data-plan="single-standard" data-min="1" data-unit="15" data-prep="Standard">
+            <span class="package-eyebrow">One-time</span>
+            <strong>Individual Standard</strong>
+            <span class="package-price">$15 <small>per meal</small></span>
+            <span>No minimum</span>
+          </button>
+          <button type="button" class="package-card" data-plan="single-halal" data-min="1" data-unit="18" data-prep="Halal">
+            <span class="package-eyebrow">One-time</span>
+            <strong>Individual Halal</strong>
+            <span class="package-price">$18 <small>per meal</small></span>
+            <span>No minimum</span>
+          </button>
+          <button type="button" class="package-card" data-plan="ten-standard" data-min="10" data-unit="14" data-prep="Standard">
+            <span class="package-eyebrow">Save when ordering 10+</span>
+            <strong>10+ Standard Meals</strong>
+            <span class="package-price">$14 <small>per meal</small></span>
+            <span>Minimum 10 meals</span>
+          </button>
+          <button type="button" class="package-card" data-plan="ten-halal" data-min="10" data-unit="16" data-prep="Halal">
+            <span class="package-eyebrow">Save when ordering 10+</span>
+            <strong>10+ Halal Meals</strong>
+            <span class="package-price">$16 <small>per meal</small></span>
+            <span>Minimum 10 meals</span>
+          </button>
+          <button type="button" class="package-card featured" data-plan="monthly-standard" data-min="25" data-unit="13" data-prep="Standard" data-monthly="true">
+            <span class="popular-badge">Best Value</span>
+            <span class="package-eyebrow">Monthly service</span>
+            <strong>25+ Standard Meals</strong>
+            <span class="package-price">$13 <small>per meal</small></span>
+            <span>Minimum 25 meals</span>
+          </button>
+          <button type="button" class="package-card featured" data-plan="monthly-halal" data-min="25" data-unit="15" data-prep="Halal" data-monthly="true">
+            <span class="popular-badge">Halal Monthly</span>
+            <span class="package-eyebrow">Monthly service</span>
+            <strong>25+ Halal Meals</strong>
+            <span class="package-price">$15 <small>per meal</small></span>
+            <span>Minimum 25 meals</span>
+          </button>
+        </div>
+
+        <div class="wizard-actions">
+          <span></span>
+          <button type="button" class="button order-next" data-next-step="2">Continue to Fulfillment</button>
+        </div>
+      </div>
+
+      <div class="wizard-panel" data-order-step="2">
+        <div class="order-panel-title">
+          <div>
+            <div class="kicker">Step 2</div>
+            <h3>Pickup or Delivery?</h3>
+          </div>
+          <p>Pickup is available Sunday after 2:00 PM. Delivery is calculated from ZIP code 32712.</p>
+        </div>
+
+        <div class="fulfillment-toggle">
+          <button type="button" class="fulfillment-card selected" data-fulfillment="pickup" data-fee="0">
+            <span class="fulfillment-icon">⌂</span>
+            <strong>Pickup</strong>
+            <span>Sunday after 2:00 PM</span>
+            <b>No fee</b>
+          </button>
+          <button type="button" class="fulfillment-card" data-fulfillment="delivery" data-fee="50">
+            <span class="fulfillment-icon">▣</span>
+            <strong>Delivery</strong>
+            <span>Enter your ZIP code</span>
+            <b>Starting at $50</b>
+          </button>
+        </div>
+
+        <div class="delivery-zip-box" hidden>
+          <label class="form-label" for="delivery-zip">Delivery ZIP code</label>
+          <div class="zip-entry">
+            <input id="delivery-zip" inputmode="numeric" maxlength="5" placeholder="Enter 5-digit ZIP">
+            <button type="button" class="button" id="check-delivery-zone">Check Delivery Fee</button>
+          </div>
+          <p id="delivery-zone-result">Within 25 miles of 32712: $50. More than 25 miles: $75, subject to service-area confirmation.</p>
+        </div>
+
+        <div class="wizard-actions">
+          <button type="button" class="button secondary order-back" data-back-step="1">Back</button>
+          <button type="button" class="button order-next" data-next-step="3">Choose Meals</button>
+        </div>
+      </div>
+
+      <div class="wizard-panel" data-order-step="3">
+        <div class="order-panel-title">
+          <div>
+            <div class="kicker">Step 3</div>
+            <h3>Select Your Bowls</h3>
+          </div>
+          <p>Use the + and − controls to choose how many of each bowl you want. Your total must meet the minimum for the selected plan.</p>
+        </div>
+
+        <div class="meal-selection-layout">
+          <div class="meal-choice-grid" id="meal-choice-grid">
+            <article class="meal-choice-card" data-meal="Signature Quinoa Bowl">
+              <div><span class="meal-number">01</span><h4>Signature Quinoa Bowl</h4><p>Shredded chicken, tomato-onion quinoa and fresh avocado.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Latin Mojo Pork Bowl">
+              <div><span class="meal-number">02</span><h4>Latin Mojo Pork Bowl</h4><p>Mojo pork, yellow rice, black beans and sweet plantains.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Taco Salad Bowl">
+              <div><span class="meal-number">03</span><h4>Taco Salad Bowl</h4><p>Ground beef, crisp lettuce, pico, cheese and sour cream.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Turkey Ragu Pasta">
+              <div><span class="meal-number">04</span><h4>Turkey Ragu Pasta</h4><p>House turkey ragu, rotini and Parmesan.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Creamy Garlic Shrimp Linguini">
+              <div><span class="meal-number">05</span><h4>Creamy Garlic Shrimp Linguini</h4><p>Shrimp, linguini and roasted garlic Parmesan sauce.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Chicken Cordon Bleu">
+              <div><span class="meal-number">06</span><h4>Chicken Cordon Bleu</h4><p>Spinach and Swiss stuffed chicken with potatoes and green beans.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Homestyle Pot Roast">
+              <div><span class="meal-number">07</span><h4>Homestyle Pot Roast</h4><p>Slow-braised pot roast, herb potatoes and broccoli.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Herb-Grilled Skirt Steak">
+              <div><span class="meal-number">08</span><h4>Herb-Grilled Skirt Steak</h4><p>Chimichurri steak, garlic mash and baby carrots.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Herb Pork Chop">
+              <div><span class="meal-number">09</span><h4>Herb Pork Chop</h4><p>Herb pork chop, mashed sweet potatoes and asparagus.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+            <article class="meal-choice-card" data-meal="Lemon Pepper Honey Salmon">
+              <div><span class="meal-number">10</span><h4>Lemon Pepper Honey Salmon</h4><p>Honey-glazed salmon, wild rice and green beans.</p></div>
+              <div class="meal-qty"><button type="button" data-meal-minus>−</button><output>0</output><button type="button" data-meal-plus>+</button></div>
+            </article>
+
+            <article class="meal-choice-card custom-meal-card" data-meal="Make Your Own Bowl">
+              <div><span class="meal-number">11</span><h4>Make Your Own Bowl</h4><p>Choose one protein and exactly two sides for each custom bowl.</p></div>
+              <button type="button" class="button custom-bowl-open">Customize a Bowl</button>
+            </article>
+          </div>
+
+          <aside class="live-cart-card">
+            <div class="kicker">Your meal box</div>
+            <h3><span id="cart-meal-count">0</span> Meals Selected</h3>
+            <div class="minimum-meter">
+              <div id="minimum-meter-fill"></div>
+            </div>
+            <p id="minimum-message">This plan has no minimum.</p>
+            <div id="mini-cart-lines" class="mini-cart-lines"><p class="empty-cart">Your selected bowls will appear here.</p></div>
+            <div class="cart-total-row"><span>Meals</span><strong id="meal-subtotal">$0.00</strong></div>
+            <div class="cart-total-row"><span>Delivery</span><strong id="delivery-subtotal">$0.00</strong></div>
+            <div class="cart-grand-total"><span>Estimated Total</span><strong id="order-grand-total">$0.00</strong></div>
+          </aside>
+        </div>
+
+        <div class="wizard-actions">
+          <button type="button" class="button secondary order-back" data-back-step="2">Back</button>
+          <button type="button" class="button order-next" id="review-order-button" data-next-step="4">Review Order</button>
+        </div>
+      </div>
+
+      <div class="wizard-panel" data-order-step="4">
+        <div class="order-panel-title">
+          <div>
+            <div class="kicker">Step 4</div>
+            <h3>Review &amp; Checkout</h3>
+          </div>
+          <p>Confirm your plan, fulfillment and meal quantities before continuing to Square’s secure checkout.</p>
+        </div>
+
+        <div class="checkout-review-grid">
+          <div class="checkout-review-card" id="checkout-review-details"></div>
+          <div class="checkout-customer-card">
+            <h4>Customer information</h4>
+            <div class="form-grid">
+              <div><label class="form-label" for="order-name">Name</label><input id="order-name" autocomplete="name"></div>
+              <div><label class="form-label" for="order-phone">Phone</label><input id="order-phone" type="tel" autocomplete="tel"></div>
+              <div class="full"><label class="form-label" for="order-email">Email</label><input id="order-email" type="email" autocomplete="email"></div>
+              <div class="full"><label class="form-label" for="order-notes">Order notes or allergies</label><textarea id="order-notes" rows="4"></textarea></div>
+            </div>
+            <div class="checkout-notice">The final payment page will be hosted securely by Square. Card information is never stored on this website.</div>
+            <button type="button" class="button checkout-square-button" id="square-dynamic-checkout">Continue to Secure Square Checkout</button>
+            <p class="checkout-setup-note" id="checkout-setup-note">Square API connection is the final technical step required to activate this button.</p>
+          </div>
+        </div>
+
+        <div class="wizard-actions">
+          <button type="button" class="button secondary order-back" data-back-step="3">Edit Meals</button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="custom-bowl-modal" id="custom-bowl-modal" aria-hidden="true">
+  <div class="custom-bowl-dialog" role="dialog" aria-modal="true" aria-labelledby="custom-bowl-title">
+    <button type="button" class="custom-modal-close" aria-label="Close custom bowl">×</button>
+    <div class="kicker">Make your own bowl</div>
+    <h3 id="custom-bowl-title">Customize One Bowl</h3>
+    <p>Each custom bowl must contain one protein and exactly two sides.</p>
+
+    <fieldset class="custom-fieldset custom-preparation-fieldset">
+      <legend>Choose preparation</legend>
+      <div class="custom-options custom-preparation-options">
+        <label><input type="radio" name="modal-preparation" value="Standard" checked> Regular</label>
+        <label><input type="radio" name="modal-preparation" value="Halal"> Halal</label>
+      </div>
+      <p class="custom-preparation-note">The custom bowl price will follow the selected plan tier: Regular or Halal.</p>
+    </fieldset>
+
+    <fieldset class="custom-fieldset">
+      <legend>Choose one protein</legend>
+      <div class="custom-options" id="custom-protein-options">
+        <label><input type="radio" name="modal-protein" value="Chicken Breast"> Chicken Breast</label>
+        <label><input type="radio" name="modal-protein" value="Chicken Leg Quarters"> Chicken Leg Quarters</label>
+        <label><input type="radio" name="modal-protein" value="Mojo Pork"> Mojo Pork</label>
+        <label><input type="radio" name="modal-protein" value="Ground Beef"> Ground Beef</label>
+        <label><input type="radio" name="modal-protein" value="Turkey Ragu"> Turkey Ragu</label>
+        <label><input type="radio" name="modal-protein" value="Pot Roast"> Pot Roast</label>
+        <label><input type="radio" name="modal-protein" value="Skirt Steak"> Skirt Steak</label>
+        <label><input type="radio" name="modal-protein" value="Pork Chop"> Pork Chop</label>
+        <label><input type="radio" name="modal-protein" value="Shrimp"> Shrimp</label>
+        <label><input type="radio" name="modal-protein" value="Salmon"> Salmon</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="custom-fieldset">
+      <legend>Choose exactly two sides</legend>
+      <div class="custom-options" id="custom-side-options">
+        <label><input type="checkbox" name="modal-side" value="Yellow Rice"> Yellow Rice</label>
+        <label><input type="checkbox" name="modal-side" value="Wild Rice"> Wild Rice</label>
+        <label><input type="checkbox" name="modal-side" value="Quinoa"> Quinoa</label>
+        <label><input type="checkbox" name="modal-side" value="Pasta (Chef's Choice)"> Pasta (Chef's Choice)</label>
+        <label><input type="checkbox" name="modal-side" value="Garlic Mashed Potatoes"> Garlic Mashed Potatoes</label>
+        <label><input type="checkbox" name="modal-side" value="Roasted Potatoes"> Roasted Potatoes</label>
+        <label><input type="checkbox" name="modal-side" value="Mashed Sweet Potatoes"> Mashed Sweet Potatoes</label>
+        <label><input type="checkbox" name="modal-side" value="Black Beans"> Black Beans</label>
+        <label><input type="checkbox" name="modal-side" value="Sweet Plantains"> Sweet Plantains</label>
+        <label><input type="checkbox" name="modal-side" value="Green Beans"> Green Beans</label>
+        <label><input type="checkbox" name="modal-side" value="Broccoli"> Broccoli</label>
+        <label><input type="checkbox" name="modal-side" value="Baby Carrots"> Baby Carrots</label>
+        <label><input type="checkbox" name="modal-side" value="Asparagus"> Asparagus</label>
+        <label><input type="checkbox" name="modal-side" value="Seasonal Vegetables"> Seasonal Vegetables</label>
+        <label><input type="checkbox" name="modal-side" value="Arugula"> Arugula</label>
+      </div>
+    </fieldset>
+
+    <label class="form-label" for="custom-bowl-note">Instructions for this bowl</label>
+    <textarea id="custom-bowl-note" rows="3" placeholder="No sauce, allergy note, sauce on the side, etc."></textarea>
+
+    <div class="custom-modal-actions">
+      <button type="button" class="button secondary custom-modal-cancel">Cancel</button>
+      <button type="button" class="button" id="add-custom-bowl">Add This Custom Bowl</button>
+    </div>
+  </div>
+</div>
+
 <section class="section light" id="signature-bowls">
 <div class="container">
   <div class="section-heading">
@@ -154,38 +441,11 @@
 
   <div class="choice-actions">
     <button class="button signature-order-btn" type="button">Order From Signature Menu</button>
-    <a class="button" href="#builder">Build Your Own Bowl</a>
+    <a class="button" href="#order-meal-prep">Build Your Own Bowl</a>
   </div>
 </div>
 </section>
-<section class="section" id="builder"><div class="container"><div class="builder-intro"><div><div class="kicker">Build your own bowl</div><h2>One Protein. Two Sides. Your Way.</h2></div><p>Choose exactly one protein and two sides. Two proteins cannot be combined in one bowl.</p></div><div class="builder-wrap"><form class="builder" id="meal-builder"><fieldset class="fieldset">
-      <legend class="legend">Choose your plan</legend>
-      <div class="option-grid plan-grid">
-        <div class="option"><input id="plan1" type="radio" name="plan" value="Single Meal" checked><label for="plan1">Single Meal</label></div>
-        <div class="option"><input id="plan2" type="radio" name="plan" value="10+ Meals"><label for="plan2">10 Meals or More</label></div>
-        <div class="option"><input id="plan3" type="radio" name="plan" value="Monthly Service 25+"><label for="plan3">Monthly Service — 25+</label></div>
-      </div>
 
-      <div class="quantity-panel" id="quantity-panel">
-        <label class="form-label" for="meal-quantity">Number of meals</label>
-        <div class="quantity-control">
-          <button type="button" id="qty-minus" aria-label="Decrease quantity">−</button>
-          <input id="meal-quantity" type="number" value="1" min="1" step="1">
-          <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
-        </div>
-        <p id="quantity-help" class="quantity-help">Single meals are ordered one at a time.</p>
-      </div>
-    </fieldset><fieldset class="fieldset"><legend class="legend">Choose one protein</legend><div class="option-grid"><div class="option"><input id="p1" type="radio" name="protein" value="Chicken Breast"><label for="p1">Chicken Breast</label></div><div class="option"><input id="p2" type="radio" name="protein" value="Chicken Leg Quarters"><label for="p2">Chicken Leg Quarters</label></div><div class="option"><input id="p3" type="radio" name="protein" value="Mojo Pork"><label for="p3">Mojo Pork</label></div><div class="option"><input id="p4" type="radio" name="protein" value="Ground Beef"><label for="p4">Ground Beef</label></div><div class="option"><input id="p5" type="radio" name="protein" value="Turkey Ragu"><label for="p5">Turkey Ragu</label></div><div class="option"><input id="p6" type="radio" name="protein" value="Pot Roast"><label for="p6">Pot Roast</label></div><div class="option"><input id="p7" type="radio" name="protein" value="Skirt Steak"><label for="p7">Skirt Steak</label></div><div class="option"><input id="p8" type="radio" name="protein" value="Pork Chop"><label for="p8">Pork Chop</label></div><div class="option"><input id="p9" type="radio" name="protein" value="Shrimp"><label for="p9">Shrimp</label></div><div class="option"><input id="p10" type="radio" name="protein" value="Salmon"><label for="p10">Salmon</label></div></div></fieldset><fieldset class="fieldset"><legend class="legend">Choose exactly two sides</legend><div class="option-grid"><div class="option"><input id="s1" type="checkbox" name="sides" value="Yellow Rice"><label for="s1">Yellow Rice</label></div><div class="option"><input id="s2" type="checkbox" name="sides" value="Wild Rice"><label for="s2">Wild Rice</label></div><div class="option"><input id="s3" type="checkbox" name="sides" value="Quinoa"><label for="s3">Quinoa</label></div><div class="option"><input id="s4" type="checkbox" name="sides" value="Pasta (Chef's Choice)"><label for="s4">Pasta (Chef's Choice)</label></div><div class="option"><input id="s5" type="checkbox" name="sides" value="Garlic Mashed Potatoes"><label for="s5">Garlic Mashed Potatoes</label></div><div class="option"><input id="s6" type="checkbox" name="sides" value="Roasted Potatoes"><label for="s6">Roasted Potatoes</label></div><div class="option"><input id="s7" type="checkbox" name="sides" value="Mashed Sweet Potatoes"><label for="s7">Mashed Sweet Potatoes</label></div><div class="option"><input id="s8" type="checkbox" name="sides" value="Black Beans"><label for="s8">Black Beans</label></div><div class="option"><input id="s9" type="checkbox" name="sides" value="Sweet Plantains"><label for="s9">Sweet Plantains</label></div><div class="option"><input id="s10" type="checkbox" name="sides" value="Green Beans"><label for="s10">Green Beans</label></div><div class="option"><input id="s11" type="checkbox" name="sides" value="Broccoli"><label for="s11">Broccoli</label></div><div class="option"><input id="s12" type="checkbox" name="sides" value="Baby Carrots"><label for="s12">Baby Carrots</label></div><div class="option"><input id="s13" type="checkbox" name="sides" value="Asparagus"><label for="s13">Asparagus</label></div><div class="option"><input id="s14" type="checkbox" name="sides" value="Seasonal Vegetables"><label for="s14">Seasonal Vegetables</label></div><div class="option"><input id="s15" type="checkbox" name="sides" value="Arugula"><label for="s15">Arugula</label></div></div></fieldset><fieldset class="fieldset"><legend class="legend">Preparation</legend><div class="option-grid"><div class="option"><input id="prep1" type="radio" name="prep" value="Standard" checked><label for="prep1">Standard</label></div><div class="option"><input id="prep2" type="radio" name="prep" value="Halal"><label for="prep2">Halal</label></div></div></fieldset>
-<fieldset class="fieldset">
-  <legend class="legend">Fulfillment</legend>
-  <div class="option-grid delivery-grid">
-    <div class="option"><input id="fulfill1" type="radio" name="fulfillment" value="Pickup" checked><label for="fulfill1">Pickup — No Fee</label></div>
-    <div class="option"><input id="fulfill2" type="radio" name="fulfillment" value="Delivery within 25 miles"><label for="fulfill2">Delivery Within 25 Miles — $50</label></div>
-    <div class="option"><input id="fulfill3" type="radio" name="fulfillment" value="Delivery over 25 miles"><label for="fulfill3">Delivery Over 25 Miles — $75</label></div>
-  </div>
-  <p class="delivery-note">Delivery distance is measured from ZIP code 32712. Orders beyond the standard service area may require confirmation.</p>
-</fieldset>
-<label class="form-label">Special instructions</label><textarea rows="4"></textarea><div class="notice-box">Allergy accommodations require confirmation.</div></form><aside class="summary"><div class="kicker">Order summary</div><h3>Your Bowl</h3><div class="summary-line"><span>Plan</span><strong id="sum-plan"></strong></div><div class="summary-line"><span>Quantity</span><strong id="sum-quantity">1 meal</strong></div><div class="summary-line"><span>Protein</span><strong id="sum-protein"></strong></div><div class="summary-line"><span>Sides</span><strong id="sum-sides"></strong></div><div class="summary-line"><span>Preparation</span><strong id="sum-prep"></strong></div><div class="summary-line"><span>Fulfillment</span><strong id="sum-fulfillment">Pickup</strong></div><div class="total" id="sum-total"></div><button class="button light" type="button" id="checkout-btn">Continue to Square Checkout</button></aside></div></div></section>
 <section class="section light compact-social-section">
 <div class="container">
   <div class="compact-social-header">
