@@ -5,5 +5,5 @@ window.ELEVATED_CONFIG = {
   instagram: "https://instagram.com/elevatedeateryco",
   tiktok: "https://www.tiktok.com/@elevatedeateryco",
   squareLinks: { singleMeal: "", tenMealPack: "", monthlyService: "" },
-  squareCheckoutEndpoint: ""
+  squareCheckoutEndpoint: "https://elevated-eatery-square-checkout.elevatedeateryco.workers.dev"
 };
