@@ -226,3 +226,180 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
 
 .custom-preparation-options{grid-template-columns:1fr 1fr;max-width:520px}
 .custom-preparation-note{font-size:12px;color:#6d6355;margin:9px 0 0}
+
+/* =========================================================
+   MOBILE-ONLY POLISH
+   Desktop styles remain unchanged. These overrides apply only
+   to screens 620px wide and smaller.
+   ========================================================= */
+@media (max-width:620px){
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-x:hidden}
+  .container{width:min(100% - 32px, var(--max))}
+
+  /* Consistent mobile rhythm */
+  .section{padding:56px 0}
+  .section-heading{margin-bottom:30px}
+  .kicker{font-size:10px;letter-spacing:.18em;margin-bottom:10px}
+  h1{font-size:clamp(43px,13vw,60px);line-height:1;letter-spacing:-.04em}
+  h2{font-size:clamp(34px,10vw,46px);line-height:1.03}
+  h3{font-size:24px}
+  .lead{font-size:17px;line-height:1.55}
+
+  /* Header and navigation */
+  .header-inner{min-height:72px;gap:14px}
+  .logo{width:116px;height:62px}
+  nav{top:72px;padding:20px 16px;gap:6px;border-top:1px solid #ffffff14;box-shadow:0 20px 35px #0009}
+  nav a{width:100%;padding:12px 4px;font-size:12px}
+  nav .nav-order{width:100%;text-align:center;padding:13px 16px;margin-top:5px}
+  .menu-toggle{min-width:44px;min-height:44px;padding:8px 11px}
+  .announcement-bar{padding:6px 10px;font-size:7.5px;line-height:1.45;letter-spacing:.07em}
+  .announcement-bar span{padding:0 3px}
+
+  /* Hero */
+  .story-hero{min-height:76svh;background-position:center 52%}
+  .story-overlay{background:linear-gradient(90deg,#000f,#000b 72%,#0005),linear-gradient(0deg,#0008,transparent 55%)}
+  .story-hero-content{padding:74px 0 66px;max-width:100%}
+  .story-hero-content p{font-size:16px;line-height:1.55}
+  .buttons,.choice-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+  .button{width:100%;min-height:48px;padding:14px 18px;font-size:11px}
+
+  /* Cards and grids */
+  .service-grid,.ordering-steps{gap:12px}
+  .service-card,.rule{padding:22px;border-radius:18px}
+  .service-card h3,.rule h3{margin-bottom:10px}
+  .aligned-inquiry,.split,.ordering-top,.builder-intro,.builder-wrap,.review-live{gap:28px}
+
+  /* Catering and private-chef imagery */
+  .inquiry-visual{grid-template-rows:260px 205px 205px;gap:9px}
+  .inquiry-visual img{border-radius:15px}
+  .contact-card{padding:24px 18px;border-radius:20px}
+  .form-grid{gap:13px}
+  textarea,input,select{font-size:16px;padding:13px}
+  .form-label{font-size:13px}
+
+  /* Live experience */
+  .live-single-layout{gap:28px}
+  .compact-live-list{margin:14px 0 22px}
+  .compact-live-list li,.luxury-list li{font-size:18px;padding:11px 0}
+  .single-live-image img{height:330px;border-radius:18px}
+  .live-collage{grid-template-rows:280px 205px 205px;gap:9px}
+  .live-collage img{border-radius:15px}
+
+  /* Simple ordering introduction */
+  .simple-ordering-grid{min-height:0}
+  .simple-ordering-image{height:310px}
+  .simple-ordering-content{padding:48px 16px 52px}
+  .simple-ordering-content h2{font-size:clamp(38px,12vw,52px)}
+  .simple-intro{font-size:16px}
+  .simple-price-list{margin:24px 0}
+  .simple-price-row{padding:16px 0}
+  .simple-price-row strong{font-size:20px}
+  .simple-countdown .clock-countdown{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .simple-countdown .clock-countdown div{min-width:0;padding:13px 7px}
+  .simple-countdown .clock-countdown strong{font-size:27px}
+
+  /* Meal photography and menus */
+  .meal-photo-band{gap:9px;margin:24px 0}
+  .meal-photo-band img{height:235px;border-radius:15px}
+  .signature-menu{border-top:0}
+  .signature-item{padding:20px 0}
+  .signature-item h3{font-size:23px;margin-bottom:7px}
+  .detailed-signature-menu .signature-item{padding:22px 0}
+  .detailed-signature-menu ul{padding-left:18px}
+  .price-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;align-items:start}
+
+  /* Legacy bowl builder */
+  .builder{padding:24px 18px;border-radius:22px}
+  .legend{font-size:24px}
+  .fieldset{margin-bottom:24px}
+  .option-grid{gap:8px}
+  .option label{padding:13px;min-height:48px;display:flex;align-items:center}
+  .summary{padding:22px 18px;border-radius:22px}
+  .summary-line{font-size:13px}
+
+  /* Social area */
+  .compact-social-section{padding:48px 0}
+  .compact-social-header{margin-bottom:18px}
+  .instagram-five{gap:8px}
+  .instagram-five a{border-radius:11px}
+  .instagram-five img{height:150px}
+
+  /* Reviews */
+  .review-live{gap:20px}
+  .rating-big{font-size:64px;line-height:1}
+  .quote{font-size:clamp(27px,8vw,36px)}
+
+  /* Footer */
+  .compact-footer{padding:24px 0 28px;gap:14px}
+  .compact-footer .footer-logo{width:132px;height:86px}
+  .footer-contact,.footer-follow{font-size:13px;gap:5px}
+  .footer-contact strong,.footer-follow strong{font-size:18px}
+
+  /* Ordering wizard */
+  .ordering-shop-section .container{width:min(100% - 20px,var(--max))}
+  .order-wizard{border-radius:20px}
+  .order-progress{padding:12px 8px;gap:3px}
+  .order-progress span{font-size:9px;letter-spacing:.04em;gap:3px;text-align:center}
+  .wizard-panel{padding:26px 14px}
+  .order-panel-title{margin-bottom:22px}
+  .order-panel-title h3{font-size:30px}
+  .order-panel-title p{font-size:14px;line-height:1.5}
+  .package-grid{gap:11px}
+  .package-card{min-height:0;padding:21px 18px;border-radius:17px}
+  .package-card strong{font-size:22px}
+  .package-price{font-size:26px}
+  .wizard-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .wizard-actions .button{width:100%}
+  .fulfillment-toggle{gap:11px}
+  .fulfillment-card{padding:20px 16px;border-radius:17px;gap:10px}
+  .fulfillment-card strong{font-size:22px}
+  .fulfillment-icon{font-size:27px}
+  .delivery-zip-box{padding:19px 15px;border-radius:15px}
+  .meal-selection-layout{gap:16px}
+  .meal-choice-grid{gap:10px}
+  .meal-choice-card{padding:17px 14px;border-radius:15px;align-items:flex-start}
+  .meal-choice-card h4{font-size:19px;line-height:1.15}
+  .meal-choice-card p{line-height:1.45}
+  .meal-qty{gap:6px;align-self:center}
+  .meal-qty button{width:38px;height:38px}
+  .custom-meal-card{display:block}
+  .custom-meal-card .button{margin-top:16px}
+  .live-cart-card{padding:21px 16px;border-radius:18px}
+  .live-cart-card h3{font-size:25px}
+  .mini-cart-lines{max-height:none}
+  .checkout-review-grid{gap:14px}
+  .checkout-review-card,.checkout-customer-card{padding:21px 16px;border-radius:17px}
+  .checkout-review-card h4,.checkout-customer-card h4{font-size:22px}
+  .review-line{font-size:13px}
+
+  /* Custom bowl modal */
+  .custom-bowl-modal{padding:8px;align-items:flex-end}
+  .custom-bowl-dialog{width:100%;max-height:93svh;border-radius:22px 22px 0 0;padding:27px 15px 20px}
+  .custom-modal-close{right:12px;top:8px;width:44px;height:44px}
+  .custom-fieldset{margin:20px 0}
+  .custom-fieldset legend{font-size:21px;padding-right:42px}
+  .custom-options{gap:8px}
+  .custom-options label{min-height:48px;padding:13px;font-size:14px;display:flex;align-items:center}
+  .custom-preparation-options{grid-template-columns:1fr 1fr}
+  .custom-modal-actions{display:grid;grid-template-columns:1fr;gap:9px}
+  .custom-modal-actions .button{width:100%}
+
+  /* General mobile interaction improvements */
+  button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+  button,.button,.option label,.custom-options label,.package-card,.fulfillment-card{touch-action:manipulation}
+}
+
+/* Extra-small phones */
+@media (max-width:390px){
+  .container{width:calc(100% - 24px)}
+  h1{font-size:40px}
+  h2{font-size:33px}
+  .story-hero{min-height:72svh}
+  .simple-ordering-content{padding-left:12px;padding-right:12px}
+  .instagram-five img{height:135px}
+  .order-progress span{font-size:8px}
+  .wizard-panel{padding-left:11px;padding-right:11px}
+  .meal-choice-card{padding:15px 11px;gap:10px}
+  .meal-qty button{width:36px;height:36px}
+}
