@@ -39,17 +39,21 @@ export default {
 
       const lineItems = [];
 
-      for (const meal of order.signatureMeals || []) {
-        lineItems.push({
-          name: meal.name,
-          quantity: String(meal.quantity),
-          base_price_money: {
-            amount: Math.round(customUnitPrice * 100),
-            currency: "USD"
-          },
-          note: `${order.plan.preparation} meal`
-        });
-      }
+      const planUnitPrice = priceForPlan(order.plan);
+
+for (const meal of order.signatureMeals || []) {
+  lineItems.push({
+    name: meal.name,
+    quantity: String(meal.quantity),
+    base_price_money: {
+      amount: Math.round(planUnitPrice * 100),
+      currency: "USD"
+    },
+    note: order.plan.key === "weekly-special"
+      ? "Chef-selected Weekly Special"
+      : `${order.plan.preparation} meal`
+  });
+}
 
       for (const [index, bowl] of (order.customBowls || []).entries()) {
         const customUnitPrice = priceForPreparation(order.plan, bowl.preparation);
@@ -57,7 +61,7 @@ export default {
           name: `Make Your Own Bowl ${index + 1}`,
           quantity: "1",
           base_price_money: {
-            amount: Math.round(order.plan.unitPrice * 100),
+           amount: Math.round(customUnitPrice * 100),
             currency: "USD"
           },
           note: [
@@ -71,9 +75,7 @@ export default {
 
       if (order.fulfillment?.fee > 0) {
         lineItems.push({
-          name: order.fulfillment.fee === 75
-            ? "Delivery — More Than 25 Miles"
-            : "Delivery — Within 25 Miles",
+         name: "Delivery — Within 25 Miles",
           quantity: "1",
           base_price_money: {
             amount: Math.round(order.fulfillment.fee * 100),
@@ -148,6 +150,33 @@ function validateOrder(order) {
   if (totalMeals < Number(order?.plan?.minimum || 1)) {
     throw new Error("The order does not meet the plan minimum.");
   }
+if (order?.plan?.key === "weekly-special") {
+  const weeklyMeals = order.signatureMeals || [];
+
+  const validWeeklyOrder =
+    weeklyMeals.length === 1 &&
+    weeklyMeals[0].name === "Weekly Special" &&
+    Number(weeklyMeals[0].quantity) >= 1 &&
+    (order.customBowls || []).length === 0;
+
+  if (!validWeeklyOrder) {
+    throw new Error(
+      "The Weekly Special plan can only contain the chef-selected Weekly Special meal."
+    );
+  }
+}
+
+if (order?.fulfillment?.method === "delivery") {
+  if (
+    Number(order.fulfillment.fee) !== 25 ||
+    !/^\d{5}$/.test(String(order.fulfillment.zip || ""))
+  ) {
+    throw new Error(
+      "Meal-prep delivery is a flat $25 within 25 miles of ZIP code 32712."
+    );
+  }
+}
+  
   for (const bowl of order.customBowls || []) {
     if (!["Standard", "Halal"].includes(bowl.preparation)) {
       throw new Error("Every custom bowl requires Regular or Halal preparation.");
@@ -157,7 +186,25 @@ function validateOrder(order) {
     }
   }
 }
+function priceForPlan(plan) {
+  const prices = {
+    "weekly-special": 10.99,
+    "single-standard": 15,
+    "single-halal": 18,
+    "ten-standard": 14,
+    "ten-halal": 16,
+    "monthly-standard": 13,
+    "monthly-halal": 15
+  };
 
+  const price = prices[plan?.key];
+
+  if (price == null) {
+    throw new Error("Invalid pricing plan.");
+  }
+
+  return price;
+}
 function priceForPreparation(plan, preparation) {
   const minimum = Number(plan?.minimum || 1);
   const tier = minimum >= 25 ? "monthly" : minimum >= 10 ? "ten" : "single";
