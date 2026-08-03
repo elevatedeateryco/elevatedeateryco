@@ -516,3 +516,30 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
     font-size: 17px;
   }
 }
+
+/* AUGUST 2026 REFINEMENTS */
+.private-chef-showcase{display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;align-items:center}
+.private-chef-copy{max-width:560px}.private-chef-copy p{font-size:17px;margin:0 0 28px}
+.meal-description{margin-top:7px}
+.meal-description summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:#786a2b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;list-style:none}
+.meal-description summary::-webkit-details-marker{display:none}
+.meal-description summary::after{content:"+";font-size:15px;line-height:1}
+.meal-description[open] summary::after{content:"−"}
+.meal-description p{margin-top:8px!important}
+.weekly-special-card{background:#fff9e9;border-color:#9a8735}
+.weekly-special-row strong,.weekly-special-row span{color:#eadb9b}
+@media(max-width:960px){.private-chef-showcase{grid-template-columns:1fr}}
+@media(max-width:620px){.private-chef-showcase{gap:28px}.meal-choice-card{align-items:flex-start}.meal-description summary{font-size:10px}}
+
+/* Weekly Special is a distinct chef-selected meal */
+.weekly-special-meal-card{
+  grid-column:1/-1;
+  background:#fff9e9;
+  border:2px solid #9a8735;
+}
+.weekly-special-meal-card[hidden],
+.custom-meal-card[hidden],
+.meal-choice-card[hidden]{display:none!important}
+@media(max-width:620px){
+  .weekly-special-meal-card{grid-column:auto}
+}
