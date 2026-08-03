@@ -403,3 +403,116 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
   .meal-choice-card{padding:15px 11px;gap:10px}
   .meal-qty button{width:36px;height:36px}
 }
+
+
+/* =========================================================
+   MOBILE OVERFLOW + TEXT FIX
+   Desktop is not affected
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  main,
+  section,
+  header,
+  footer,
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  li,
+  a,
+  span,
+  label,
+  button {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  .story-hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .story-hero h1 {
+    font-size: clamp(42px, 12vw, 64px);
+    line-height: 0.95;
+    max-width: 100%;
+  }
+
+  .story-hero .lead {
+    width: 100%;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  .section-heading,
+  .live-copy,
+  .contact-card,
+  .inquiry-visual,
+  .service-card,
+  .plan-card,
+  .meal-card,
+  .fulfillment-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+
+  .header-inner,
+  nav {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .story-hero h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .story-hero .lead {
+    font-size: 17px;
+  }
+}
