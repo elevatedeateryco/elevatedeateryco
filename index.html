@@ -655,4 +655,39 @@
   </div>
 </div>
 </footer>
-<div class="modal" id="square-modal"><div class="modal-card"><button class="close" data-close-modal>×</button><h3>Square checkout connection needed</h3><p>Add your Square Payment Links in config.js to activate checkout.</p><button class="button" data-close-modal>Close</button></div></div><script src="script.js"></script></body></html>
+<div class="modal" id="square-modal"><div class="modal-card"><button class="close" data-close-modal>×</button><h3>Square checkout connection needed</h3><p>Add your Square Payment Links in config.js to activate checkout.</p><button class="button" data-close-modal>Close</button></div></div><script src="script.js"></script><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("experienceGallery");
+  const prevButton = document.querySelector(".gallery-prev");
+  const nextButton = document.querySelector(".gallery-next");
+
+  if (!gallery || !prevButton || !nextButton) return;
+
+  function getScrollAmount() {
+    const firstPhoto = gallery.querySelector("a");
+
+    if (!firstPhoto) {
+      return gallery.clientWidth * 0.8;
+    }
+
+    const styles = window.getComputedStyle(gallery);
+    const gap = parseFloat(styles.gap) || 0;
+
+    return firstPhoto.getBoundingClientRect().width + gap;
+  }
+
+  nextButton.addEventListener("click", function () {
+    gallery.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  prevButton.addEventListener("click", function () {
+    gallery.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+});
+</script></body></html>
