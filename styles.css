@@ -1169,3 +1169,146 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
   }
 }
 
+/* =========================================
+   FOLLOW THE EXPERIENCE - SCROLLING GALLERY
+   ========================================= */
+
+.experience-gallery-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.experience-gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 2px 8px;
+}
+
+.experience-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.experience-gallery a {
+  flex: 0 0 calc((100% - 64px) / 5);
+  min-width: 0;
+  scroll-snap-align: start;
+  display: block;
+}
+
+.experience-gallery img {
+  width: 100%;
+  height: 315px;
+  display: block;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+/* Gallery arrows */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(250, 246, 237, 0.95);
+  color: #302817;
+
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-arrow:hover {
+  background: #ffffff;
+}
+
+.gallery-arrow:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.gallery-prev {
+  left: -26px;
+}
+
+.gallery-next {
+  right: -26px;
+}
+
+
+/* TABLET */
+@media (max-width: 1000px) {
+
+  .experience-gallery a {
+    flex: 0 0 calc((100% - 32px) / 3);
+  }
+
+  .experience-gallery img {
+    height: 285px;
+  }
+
+  .gallery-prev {
+    left: 8px;
+  }
+
+  .gallery-next {
+    right: 8px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 650px) {
+
+  .experience-gallery-wrap {
+    margin-top: 18px;
+  }
+
+  .experience-gallery {
+    gap: 12px;
+    padding-right: 35px;
+  }
+
+  .experience-gallery a {
+    flex: 0 0 78%;
+  }
+
+  .experience-gallery img {
+    height: 270px;
+    border-radius: 18px;
+  }
+
+  .gallery-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .gallery-prev {
+    left: 8px;
+  }
+
+  .gallery-next {
+    right: 8px;
+  }
+}
