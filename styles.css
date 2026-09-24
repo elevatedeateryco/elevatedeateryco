@@ -1319,4 +1319,73 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
   .gallery-next {
     right: 8px;
   }
+} /* =========================================
+   MOBILE GALLERY FIX
+   Keep Follow the Experience horizontal
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .experience-gallery-wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .experience-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    gap: 12px !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 0 45px 8px 0 !important;
+  }
+
+  .experience-gallery > a {
+    display: block !important;
+
+    flex: 0 0 82% !important;
+    width: 82% !important;
+    min-width: 82% !important;
+    max-width: 82% !important;
+
+    scroll-snap-align: start;
+  }
+
+  .experience-gallery > a > img {
+    display: block !important;
+
+    width: 100% !important;
+    height: 280px !important;
+
+    object-fit: cover !important;
+    border-radius: 18px !important;
+  }
+
+  .gallery-arrow {
+    display: flex !important;
+    position: absolute !important;
+    top: 50% !important;
+    z-index: 50 !important;
+  }
+
+  .gallery-prev {
+    left: 8px !important;
+  }
+
+  .gallery-next {
+    right: 8px !important;
+  }
 }
