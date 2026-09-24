@@ -748,3 +748,179 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
 @media(max-width:390px){
   .custom-preparation-options{grid-template-columns:1fr!important}
 }
+
+/* =========================================
+   MEAL PREP + FAMILY MEAL PLANNING
+   ========================================= */
+
+.meal-services-section{
+  background:#f4ead8;
+  padding:80px 0;
+}
+
+.meal-services-heading{
+  max-width:760px;
+  margin-bottom:38px;
+}
+
+.meal-services-heading h2{
+  margin-bottom:14px;
+}
+
+.meal-service-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:stretch;
+}
+
+.meal-service-card{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  min-height:540px;
+  display:flex;
+  flex-direction:column;
+}
+
+.meal-service-content{
+  padding:42px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.meal-service-card h3{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:36px;
+  line-height:1.05;
+  margin:8px 0 18px;
+}
+
+.weekly-meal-card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  color:#111;
+}
+
+.family-meal-card{
+  background:#111;
+  color:#f7f0e4;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.family-meal-card .kicker{
+  color:#d8bd66;
+}
+
+.meal-service-features{
+  list-style:none;
+  padding:0;
+  margin:25px 0 30px;
+}
+
+.meal-service-features li{
+  position:relative;
+  padding:10px 0 10px 26px;
+  border-bottom:1px solid rgba(0,0,0,.10);
+}
+
+.meal-service-features li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  font-weight:700;
+}
+
+.family-meal-card .meal-service-features li{
+  border-bottom-color:rgba(255,255,255,.14);
+}
+
+.meal-service-pricing{
+  display:flex;
+  align-items:flex-end;
+  gap:10px;
+  margin-top:auto;
+  margin-bottom:18px;
+}
+
+.meal-service-pricing span{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.meal-service-pricing strong{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:32px;
+}
+
+.premium-label{
+  position:absolute;
+  top:0;
+  right:0;
+  background:#927f28;
+  color:#fff;
+  padding:10px 18px;
+  border-radius:0 18px 0 14px;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.family-service-intro{
+  color:rgba(255,255,255,.82);
+}
+
+.family-service-note{
+  margin-top:auto;
+  margin-bottom:22px;
+  font-style:italic;
+  color:rgba(255,255,255,.72);
+}
+
+.family-meal-card .button{
+  background:#927f28;
+  color:#fff;
+  border-color:#927f28;
+}
+
+.family-meal-card .button:hover{
+  background:#aa9635;
+  border-color:#aa9635;
+}
+
+@media(max-width:760px){
+  .meal-services-section{
+    padding:55px 0;
+  }
+
+  .meal-service-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .meal-service-card{
+    min-height:0;
+  }
+
+  .meal-service-content{
+    padding:30px 24px;
+  }
+
+  .meal-service-card h3{
+    font-size:30px;
+  }
+
+  .premium-label{
+    position:relative;
+    display:inline-block;
+    align-self:flex-start;
+    border-radius:0 0 12px 0;
+  }
+
+  .family-service-note{
+    margin-top:24px;
+  }
+}
