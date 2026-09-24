@@ -926,83 +926,72 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
 }
 
 /* =========================================
-   REQUEST A QUOTE - FOUR IMAGE GALLERY FIX
+   REQUEST A QUOTE + MEAL SERVICES
+   Consolidated layout rules
    ========================================= */
 
-#catering-form-wrap .aligned-inquiry{
-  grid-template-columns:1fr 1fr;
-  gap:34px;
-  align-items:stretch;
-}
-
-#catering-form-wrap .inquiry-visual{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  gap:8px;
-  min-height:620px;
-}
-
-#catering-form-wrap .inquiry-visual img,
-#catering-form-wrap .inquiry-visual .hero-catering{
-  width:100%;
-  height:100%;
+/* Meal Prep vs Family Meal Planning */
+#meal-prep{
+  background:#f4ead8;
+  color:var(--ink);
+  padding:56px 0;
   min-height:0;
-  object-fit:cover;
-  grid-column:auto;
-  grid-row:auto;
-  border-radius:14px;
+  height:auto;
 }
 
-#catering-form-wrap .contact-card{
+#meal-prep .container{
+  display:block;
+  min-height:0;
+}
+
+#meal-prep .meal-services-heading{
+  max-width:760px;
+  margin:0 0 32px;
+  padding:0;
+  color:var(--ink);
+}
+
+#meal-prep .meal-services-heading h2,
+#meal-prep .meal-services-heading p{
+  color:var(--ink);
+}
+
+#meal-prep .meal-services-heading h2{
+  margin-bottom:14px;
+}
+
+#meal-prep .meal-service-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;
+  margin:0;
+  padding:0;
+}
+
+#meal-prep .meal-service-card{
+  height:100%;
+  margin:0;
+}
+
+#meal-prep .meal-service-card .button{
   width:100%;
-  min-width:0;
+  box-sizing:border-box;
+  text-align:center;
 }
 
-@media(max-width:960px){
-  #catering-form-wrap .aligned-inquiry{
-    grid-template-columns:1fr;
-  }
-
-  #catering-form-wrap .inquiry-visual{
-    min-height:600px;
-  }
-}
-
-@media(max-width:620px){
-  #catering-form-wrap .inquiry-visual{
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:220px 220px;
-    min-height:auto;
-    gap:6px;
-  }
-
-  #catering-form-wrap .inquiry-visual img,
-  #catering-form-wrap .inquiry-visual .hero-catering{
-    height:100%;
-  }
-}
-/* =========================================
-   FINAL SECTION SPACING + RESPONSIVE CLEANUP
-   ========================================= */
-
-/* Keep newly edited sections from feeling like separate slides */
-.meal-services-section{
-  padding-top:60px;
-  padding-bottom:60px;
-}
-
+/* Meal-prep ordering section rhythm */
 #order-meal-prep{
   padding-top:60px;
   padding-bottom:60px;
 }
 
+/* Request a Quote: four-photo gallery + form */
 #catering-form-wrap{
   padding-top:60px;
   padding-bottom:60px;
 }
 
-/* Quote section - desktop */
 #catering-form-wrap .aligned-inquiry{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
@@ -1012,11 +1001,12 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
 
 #catering-form-wrap .inquiry-visual{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:repeat(2, 280px);
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-rows:repeat(2,minmax(0,1fr));
   gap:8px;
-  min-height:0;
   width:100%;
+  height:100%;
+  min-height:0;
 }
 
 #catering-form-wrap .inquiry-visual img,
@@ -1040,25 +1030,9 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
   box-sizing:border-box;
 }
 
-/* Meal service cards stay evenly aligned */
-.meal-service-grid{
-  align-items:stretch;
-}
-
-.meal-service-card{
-  height:100%;
-}
-
-.meal-service-card .button{
-  width:100%;
-  box-sizing:border-box;
-  text-align:center;
-}
-
-/* Tablet + mobile */
+/* Tablet */
 @media(max-width:960px){
-
-  .meal-services-section,
+  #meal-prep,
   #order-meal-prep,
   #catering-form-wrap{
     padding-top:45px;
@@ -1073,7 +1047,7 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
   #catering-form-wrap .inquiry-visual{
     grid-template-columns:1fr 1fr;
     grid-template-rows:240px 240px;
-    gap:8px;
+    height:auto;
   }
 
   #catering-form-wrap .contact-card{
@@ -1083,24 +1057,28 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
 
 /* Phones */
 @media(max-width:620px){
-
-  .meal-services-section,
+  #meal-prep,
   #order-meal-prep,
   #catering-form-wrap{
     padding-top:36px;
     padding-bottom:36px;
   }
 
-  .meal-services-heading{
+  #meal-prep .meal-services-heading{
     margin-bottom:24px;
   }
 
-  .meal-service-grid{
+  #meal-prep .meal-service-grid{
     grid-template-columns:1fr;
     gap:18px;
   }
 
-  .meal-service-content{
+  #meal-prep .meal-service-card{
+    min-height:0;
+    height:auto;
+  }
+
+  #meal-prep .meal-service-content{
     padding:28px 22px;
   }
 
@@ -1130,96 +1108,5 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
     width:100%;
     max-width:100%;
     box-sizing:border-box;
-  }
-}
-
-/* Remove excess vertical space before meal services */
-#meal-prep{
-  min-height:0 !important;
-  height:auto !important;
-  margin-top:0 !important;
-}
-
-#meal-prep .container{
-  min-height:0 !important;
-  height:auto !important;
-}
-
-#meal-prep .meal-services-heading{
-  margin-top:0 !important;
-  padding-top:0 !important;
-}
-
-@media(min-width:621px){
-  #meal-prep{
-    padding-top:50px !important;
-    padding-bottom:50px !important;
-  }
-}
-
-@media(max-width:620px){
-  #meal-prep{
-    padding-top:36px !important;
-    padding-bottom:36px !important;
-  }
-}
-/* =========================================
-   MEAL SERVICES LAYOUT CORRECTION
-   ========================================= */
-
-#meal-prep .container{
-  display:block !important;
-}
-
-#meal-prep .meal-services-heading{
-  display:block !important;
-  position:relative !important;
-  margin:0 0 32px 0 !important;
-  padding:0 !important;
-  min-height:0 !important;
-  height:auto !important;
-}
-
-#meal-prep .meal-service-grid{
-  display:grid !important;
-  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
-  gap:24px !important;
-  margin:0 !important;
-  padding:0 !important;
-  position:relative !important;
-  top:auto !important;
-  transform:none !important;
-  min-height:0 !important;
-}
-
-#meal-prep .meal-service-card{
-  margin:0 !important;
-  position:relative !important;
-  top:auto !important;
-  transform:none !important;
-}
-
-/* Make quote gallery taller to balance the form */
-@media(min-width:961px){
-  #catering-form-wrap .inquiry-visual{
-    grid-template-rows:repeat(2, 320px) !important;
-    min-height:648px !important;
-  }
-}
-
-/* Mobile meal service layout */
-@media(max-width:620px){
-  #meal-prep .meal-services-heading{
-    margin-bottom:24px !important;
-  }
-
-  #meal-prep .meal-service-grid{
-    grid-template-columns:1fr !important;
-    gap:18px !important;
-  }
-
-  #meal-prep .meal-service-card{
-    min-height:0 !important;
-    height:auto !important;
   }
 }
