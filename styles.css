@@ -1132,3 +1132,34 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
     box-sizing:border-box;
   }
 }
+
+/* Remove excess vertical space before meal services */
+#meal-prep{
+  min-height:0 !important;
+  height:auto !important;
+  margin-top:0 !important;
+}
+
+#meal-prep .container{
+  min-height:0 !important;
+  height:auto !important;
+}
+
+#meal-prep .meal-services-heading{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
+
+@media(min-width:621px){
+  #meal-prep{
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+}
+
+@media(max-width:620px){
+  #meal-prep{
+    padding-top:36px !important;
+    padding-bottom:36px !important;
+  }
+}
