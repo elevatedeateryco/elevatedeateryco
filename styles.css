@@ -982,3 +982,153 @@ footer{padding:58px 0;background:#040403}.footer-grid{display:grid;grid-template
     height:100%;
   }
 }
+/* =========================================
+   FINAL SECTION SPACING + RESPONSIVE CLEANUP
+   ========================================= */
+
+/* Keep newly edited sections from feeling like separate slides */
+.meal-services-section{
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+#order-meal-prep{
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+#catering-form-wrap{
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+/* Quote section - desktop */
+#catering-form-wrap .aligned-inquiry{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:28px;
+  align-items:stretch;
+}
+
+#catering-form-wrap .inquiry-visual{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:repeat(2, 280px);
+  gap:8px;
+  min-height:0;
+  width:100%;
+}
+
+#catering-form-wrap .inquiry-visual img,
+#catering-form-wrap .inquiry-visual .hero-catering{
+  display:block;
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  object-fit:cover;
+  border-radius:12px;
+  grid-column:auto;
+  grid-row:auto;
+}
+
+#catering-form-wrap .contact-card{
+  width:100%;
+  max-width:none;
+  min-width:0;
+  height:100%;
+  box-sizing:border-box;
+}
+
+/* Meal service cards stay evenly aligned */
+.meal-service-grid{
+  align-items:stretch;
+}
+
+.meal-service-card{
+  height:100%;
+}
+
+.meal-service-card .button{
+  width:100%;
+  box-sizing:border-box;
+  text-align:center;
+}
+
+/* Tablet + mobile */
+@media(max-width:960px){
+
+  .meal-services-section,
+  #order-meal-prep,
+  #catering-form-wrap{
+    padding-top:45px;
+    padding-bottom:45px;
+  }
+
+  #catering-form-wrap .aligned-inquiry{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  #catering-form-wrap .inquiry-visual{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:240px 240px;
+    gap:8px;
+  }
+
+  #catering-form-wrap .contact-card{
+    height:auto;
+  }
+}
+
+/* Phones */
+@media(max-width:620px){
+
+  .meal-services-section,
+  #order-meal-prep,
+  #catering-form-wrap{
+    padding-top:36px;
+    padding-bottom:36px;
+  }
+
+  .meal-services-heading{
+    margin-bottom:24px;
+  }
+
+  .meal-service-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .meal-service-content{
+    padding:28px 22px;
+  }
+
+  #catering-form-wrap .aligned-inquiry{
+    gap:18px;
+  }
+
+  #catering-form-wrap .inquiry-visual{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:180px 180px;
+    gap:6px;
+  }
+
+  #catering-form-wrap .contact-card{
+    width:100%;
+    padding:26px 20px;
+  }
+
+  #catering-form-wrap .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  #catering-form-wrap input,
+  #catering-form-wrap select,
+  #catering-form-wrap textarea,
+  #catering-form-wrap button{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+}
